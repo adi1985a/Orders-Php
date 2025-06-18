@@ -1,0 +1,445 @@
+/* Dodatkowe style i animacje dla piekarni online */
+
+/* Animacje dla elementów */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Klasy animacji */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+/* Efekty hover dla kart produktów */
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.product-card:hover::before {
+    left: 100%;
+}
+
+/* Efekty dla przycisków */
+.quantity-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.quantity-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.quantity-btn:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+/* Efekty dla obrazów */
+.hero-image img {
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Efekty dla nagłówków */
+.header h1 {
+    position: relative;
+}
+
+.header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: white;
+    transform: translateX(-50%);
+    transition: width 0.5s ease;
+}
+
+.header h1:hover::after {
+    width: 100px;
+}
+
+/* Efekty dla tabeli */
+.order-table tr {
+    transition: all 0.3s ease;
+}
+
+.order-table tr:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Efekty dla badge'ów ilości */
+.quantity-badge {
+    position: relative;
+    overflow: hidden;
+}
+
+.quantity-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.quantity-badge:hover::before {
+    left: 100%;
+}
+
+/* Efekty dla ikon */
+.product-icon {
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-icon {
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* Efekty dla sekcji specjalnej oferty */
+.special-offer {
+    position: relative;
+    overflow: hidden;
+}
+
+.special-offer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+/* Efekty dla formularza */
+.order-form {
+    position: relative;
+}
+
+.order-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+    background-size: 200% 100%;
+    animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Efekty dla przycisków akcji */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Efekty dla sekcji funkcji */
+.feature {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature:hover::before {
+    opacity: 1;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+/* Efekty dla obrazów zamówienia */
+.order-image img {
+    transition: all 0.3s ease;
+    filter: brightness(0.9);
+}
+
+.order-image img:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+/* Responsywność dla animacji */
+@media (max-width: 768px) {
+    .animate-slide-in-left,
+    .animate-slide-in-right {
+        animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-3px);
+    }
+    
+    .feature:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* Efekty dla loading spinner */
+.spinner {
+    position: relative;
+}
+
+.spinner::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #667eea, #764ba2) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efekty dla nagłówków sekcji */
+.form-title h3,
+.summary-header h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.form-title h3::after,
+.summary-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: width 0.5s ease;
+}
+
+.form-title:hover h3::after,
+.summary-header:hover h2::after {
+    width: 100%;
+}
+
+/* Efekty dla inputów */
+.quantity-input input {
+    transition: all 0.3s ease;
+}
+
+.quantity-input input:focus {
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: scale(1.05);
+}
+
+/* Efekty dla total row */
+.total-row {
+    position: relative;
+    overflow: hidden;
+}
+
+.total-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.total-row:hover::before {
+    left: 100%;
+}
+
+/* Efekty dla discount info */
+.discount-info {
+    position: relative;
+    overflow: hidden;
+}
+
+.discount-info::after {
+    content: '🎉';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+}
+
+/* Efekty dla container */
+.container {
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.3) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+} 
