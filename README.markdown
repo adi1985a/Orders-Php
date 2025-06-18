@@ -1,4 +1,4 @@
-# 🛒🍩 PHP Online Bakery Ordering System
+# 🛒🍩 Online Bakery Ordering System
 _A modern PHP-based website for ordering bakery products, featuring a stylish UI, real-time summary, discount system, and advanced JavaScript interactions._
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,14 +9,20 @@ _A modern PHP-based website for ordering bakery products, featuring a stylish UI
 1. [Overview](#-overview)
 2. [Key Features](#-key-features)
 3. [Screenshots](#-screenshots)
-4. [System Requirements](#-system-requirements)
-5. [Local Setup](#-local-setup)
-6. [Usage](#-usage)
-7. [File Structure](#-file-structure)
-8. [Notes](#-notes)
-9. [Contributing](#-contributing)
-10. [License](#-license)
-11. [Contact](#-contact)
+4. [Products & Prices](#-products--prices)
+5. [Discount System](#-discount-system)
+6. [Design & Technical Features](#-design--technical-features)
+7. [Responsiveness](#-responsiveness)
+8. [Possible Extensions](#-possible-extensions)
+9. [Technologies](#-technologies)
+10. [System Requirements](#-system-requirements)
+11. [Local Setup](#-local-setup)
+12. [Usage](#-usage)
+13. [File Structure](#-file-structure)
+14. [Notes](#-notes)
+15. [Contributing](#-contributing)
+16. [License](#-license)
+17. [Contact](#-contact)
 
 ## 📄 Overview
 
@@ -29,15 +35,20 @@ The **Online Bakery Ordering System** is a modern web application that allows us
 
 ## ✨ Key Features
 
-*   🛒 **Order 4 Products**: Donuts, cookies, cakes, and coffee, each with quantity controls.
-*   💸 **Discount System**: 10% discount automatically applied for orders above €12.
-*   🧾 **Real-Time Summary**: Live updates of product count and total price.
-*   🎨 **Modern Design**: Gradient backgrounds, animated buttons, and responsive layout.
-*   ⚡ **Advanced JavaScript**: Keyboard shortcuts, touch gestures, scroll animations, notifications, and data export (JSON).
-*   🛡️ **Form Validation**: Ensures products are selected and data is correct.
-*   📱 **Mobile-First**: Fully responsive for mobile, tablet, and desktop.
-*   📤 **Order Export**: Save your order as a JSON file.
-*   🔔 **Visual Notifications**: Elegant alerts for discounts and actions.
+- **Modern gradient background** with beautiful color transitions
+- **Responsive design** for all devices (mobile, tablet, desktop)
+- **CSS animations**: smooth transitions, hover effects, fade, slide, pulse, bounce, rotate
+- **Font Awesome icons** and **Unsplash images** for professional look
+- **Order 4 products**: donuts, cookies, cakes, coffee, each with quantity controls (+/- buttons, keyboard, touch)
+- **Form validation**: ensures products are selected and data is correct
+- **Discount system**: 10% discount for orders above €12, with visual notifications
+- **Real-time summary**: live updates of product count and total price
+- **Advanced JavaScript**: keyboard shortcuts, touch gestures, scroll animations, notifications, data export (JSON), form reset
+- **Mobile-first**: fully responsive for mobile, tablet, and desktop
+- **Order export**: save your order as a JSON file
+- **Visual notifications**: elegant alerts for discounts and actions
+- **Dynamic tables**: generate HTML based on data
+- **Secure data**: validate and sanitize data
 
 ## 🖼️ Screenshots
 
@@ -52,11 +63,98 @@ _Sample screenshots of the bakery ordering page and order summary._
 </p>
 
 
+## 📊 Products & Prices
+
+| Product | Price | Icon |
+|---------|-------|------|
+| Donuts  | €0.25 each | 🍩 |
+| Cookies | €0.30 each | 🍪 |
+| Cakes   | €4.00 each | 🎂 |
+| Coffee  | €2.10 each | ☕ |
+
+## 🎁 Discount System
+
+- **10% discount** for orders above €12
+- **Automatic calculation** of discounts
+- **Visual notifications** about discounts
+- **Animated effects** for special offers
+
+## 🎨 Design & Technical Features
+
+### Colors and Styles
+- **Background gradient**: Blue-violet gradient
+- **Product cards**: White cards with hover effects
+- **Buttons**: Gradient buttons with animations
+- **Tables**: Modern tables with hover effects
+
+### Animations & Effects
+- **Fade In Up**: Elements appear from bottom
+- **Slide In**: Elements slide in from sides
+- **Pulse**: Pulsing effects for special offers
+- **Bounce**: Bouncing emojis and elements
+- **Rotate**: Rotating icons on hover
+- **Hover Effects**: Product cards lift up, buttons shine, icons rotate/scale, images scale up
+
+### JavaScript
+- **Form validation**
+- **Real-time updates**
+- **Keyboard handling**
+- **Touch gestures**
+- **Scroll animations**
+- **Notifications**
+- **Data export**
+- **Form reset**
+
+### PHP
+- **Form processing**
+- **Discount calculation**
+- **Secure data**
+- **Dynamic tables**
+
+### CSS
+- **Grid Layout**
+- **Flexbox**
+- **CSS Variables**
+- **Media Queries**
+- **CSS Animations**
+
+## 📱 Responsiveness
+
+### Breakpoints
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+### Adaptations
+- **Mobile**: Vertical layout, larger buttons
+- **Tablet**: Horizontal card layout, medium buttons
+- **Desktop**: Full layout, all effects
+
+## 🔮 Possible Extensions
+
+- **Login system** - user accounts
+- **Order history** - view previous orders
+- **Payment system** - online payment integration
+- **Shopping cart** - save products
+- **Rating system** - rate products
+- **Newsletter** - notification subscription
+- **Chat support** - customer service chat
+
+## 🛠️ Technologies
+
+- **HTML5** - semantic markup
+- **CSS3** - modern styles and animations
+- **JavaScript ES6+** - advanced functions
+- **PHP** - server-side processing
+- **Font Awesome** - icons
+- **Google Fonts** - typography
+- **Unsplash** - images
+
 ## 🛠️ System Requirements
 
-* **Web Server with PHP** (e.g., XAMPP, WAMP, or PHP built-in server)
-* **Modern Web Browser** (with CSS3 and ES6 support)
-* **Internet Connection** (for icons and images)
+- **Web Server with PHP** (e.g., XAMPP, WAMP, or PHP built-in server)
+- **Modern Web Browser** (with CSS3 and ES6 support)
+- **Internet Connection** (for icons and images)
 
 ## ⚙️ Local Setup
 
@@ -98,12 +196,12 @@ Ordering_PHP/
 
 ## 🔔 Notes
 
-* **Discount**: 10% off for orders above €12 is applied automatically.
-* **Form Validation**: The form checks for valid product selection before submission.
-* **Responsive Design**: Works on all devices (mobile, tablet, desktop).
-* **No payment integration**: This is a demo/template project.
-* **Modern UI**: Uses CSS3, Flexbox, Grid, and animations for a professional look.
-* **Data Export**: Orders can be saved as JSON for demo purposes.
+- **Discount**: 10% off for orders above €12 is applied automatically.
+- **Form Validation**: The form checks for valid product selection before submission.
+- **Responsive Design**: Works on all devices (mobile, tablet, desktop).
+- **No payment integration**: This is a demo/template project.
+- **Modern UI**: Uses CSS3, Flexbox, Grid, and animations for a professional look.
+- **Data Export**: Orders can be saved as JSON for demo purposes.
 
 ## 🤝 Contributing
 
@@ -120,7 +218,7 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 
 ## 📧 Contact
 
-Created by **Adrian Lesniak**. For questions or feedback, please open an issue or contact the repository owner.
+Created with ❤️ by **Adrian Lesniak** for modern online bakery. For questions or feedback, please open an issue or contact the repository owner.
 
 ---
 
